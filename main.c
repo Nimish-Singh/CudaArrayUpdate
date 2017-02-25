@@ -45,7 +45,7 @@ int main()
 	end = clock();
 	cudaMemcpy(h_array, d_array, arrayBytes, cudaMemcpyDeviceToHost);
 	//printArray(h_array, arraySize);
-	printf("\nTime elapsed=%lf\n", (double)end - start);
+	printf("\nTime elapsed= %6.3lf seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
 	cudaFree(d_array);
 	return 0;
 }
